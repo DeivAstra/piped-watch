@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Popup</title>
+		<meta charset="UTF-8">
+		<!--<script src="js/api.js"></script>  -->
+		<script type="module" src="js/popup.js"></script>
+		<style type="text/css">
+			body {
+				min-width: 250px;
+				background: #2e2e31;
+				font-family: Helvetica, Arial, Ubuntu, sans-serif;
+				font-size: 85%;
+			}
+			#title {
+				color: white;
+				text-align: center;
+				font-weight: bold;
+				font-size: medium;
+			}
+			#title:after {
+				content: 'W';
+				position: absolute;
+				font-size: 9px;
+				top: 5px;
+			}
+			#title::first-letter {
+				color: red;
+			}
+			#logPanel, #workSection, #setupSection {
+				display: none;
+				margin-top: 10px;
+			}
+			#instanceSelect {
+				width: 100%;
+			}
+			#instancePanel {
+				margin-top: 10px;
+			}
+			#instancePanel {
+				display: none;
+				padding: 5px;
+				color: lightgray;
+				border: 1px solid dimgray;
+			}
+			#instancePanel a {
+				color: red;
+				font-weight: bold;
+			}
+			#reloadBtn, #aboutBtn, #optionsBtn {
+				margin: 8px 0 0 5px;
+				font-size: 80%;
+				text-align: center;
+				float: right;
+				cursor: pointer;
+				background-color: darkgray;
+				padding: 2px;
+				border-top-left-radius: 5px;
+			}
+			#reloadBtn {
+				float: left;
+				background-color: white;
+			}
+			#setupSection .header {
+				color: lightgray;
+				font-weight: bold; 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="title">Piped</div>
+		<section id="setupSection">
+			<div class="header">Setup instances. Please wait ..</div>
+			<div id="logPanel"></div>
+		</section>
+		<section id="workSection">
+			<select id="instanceSelect"></select>
+			<div id="instancePanel">
+				<div><b>Home: </b><span data='homeUrl'></span></div>
+				<div><b>Locations: </b><span data='locations'></span></div>
+				<div><b>Registered: </b><span data='registered'></span></div>
+				<div><b>CDN: </b><span data='cdn'></span></div>
+				<div><b>Up to date: </b><span data='upToDate'></span></div>
+				<div><b>Version: </b><span data='version'></span></div>
+			</div>
+		</section>
+		<section id="toolbarSection">
+			<div id="reloadBtn">Reload</div>
+			<div id="aboutBtn">About</div>
+			<div id="optionsBtn">Options</div>
+		</section>
+	</body>
+</html>

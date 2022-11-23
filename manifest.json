@@ -1,0 +1,31 @@
+{
+	"name": "Piped Watch",
+	"version": "1.1",
+	"description": "Redirect YouTube videos to Piped, an alternative frontend.",
+	"manifest_version": 3,
+	"icons": {
+		"16":  "icon/icon-16.png",
+		"32":  "icon/icon-32.png",
+		"48":  "icon/icon-48.png",
+		"128": "icon/icon-128.png"
+	},
+	"background": {
+		"service_worker": "js/background.js",
+		"type": "module"
+	},
+	"permissions": [
+		"declarativeNetRequest", "storage"
+	],
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"action": {
+		"default_title": "Piped Watch",
+		"default_icon": "icon/icon-32.png",
+		"default_popup": "popup.html"
+	},
+	"options_ui": {
+		"page": "options.html"
+	},
+	"author": "Deiv Astra"
+}
